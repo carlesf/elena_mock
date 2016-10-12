@@ -3,11 +3,11 @@ info:
   title: SUPERSEDE ReleasePlanner. Wrapper of Valentin's Implementation
   version: "1.0.0"
 # the domain of the service
-host: localhost
+host: elena-mock-carlesf.c9users.io
 #release-planner-ui-api.herokuapp.com
 # array of all schemes that your API supports
 schemes:
-  - http
+  - https
 # will be prefixed to all paths
 basePath: /api/v1
 produces:
@@ -65,9 +65,10 @@ definitions:
           $ref: '#/definitions/Skill'
       depends_on:
         type: array
-        description: array of features
+        description: array of feature names
         items:
-          $ref: '#/definitions/Feature'
+          type: string
+          description: Feature name (ID)
   Resource:
     type: object
     properties:
