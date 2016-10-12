@@ -165,3 +165,69 @@ Processing by DefaultController#add_skills_to_feature as JSON
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 17:22:16 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[], "resources"=>[{"name"=>"pepe", "weekAvailability"=>100, "skills"=>[{"name"=>"Java"}]}]}
+Completed 200 OK in 1ms (Views: 0.6ms)
+
+
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 17:30:18 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 17:44:10 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 200 OK in 4ms (Views: 0.8ms)
+
+
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 17:53:59 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 200 OK in 1ms (Views: 0.8ms)
+
+
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 18:27:54 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 500 Internal Server Error in 50ms
+
+
+  
+NameError (undefined local variable or method `f' for #<DefaultController:0x00000001bd2030>):
+  
+app/controllers/default_controller.rb:29:in `block in add_skills_to_feature'
+app/controllers/default_controller.rb:29:in `each'
+app/controllers/default_controller.rb:29:in `add_skills_to_feature'
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 18:28:34 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 200 OK in 1ms (Views: 0.6ms)
+
+
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 18:34:58 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `duration' for #<ActionController::Parameters:0x007f4f0c05a408>):
+  
+app/controllers/default_controller.rb:33:in `block in add_skills_to_feature'
+app/controllers/default_controller.rb:30:in `each'
+app/controllers/default_controller.rb:30:in `add_skills_to_feature'
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 18:35:44 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 200 OK in 2ms (Views: 1.0ms)
+
+
+Started POST "/api/v1/replan" for 83.49.101.3 at 2016-10-12 18:39:19 +0000
+Processing by DefaultController#add_skills_to_feature as JSON
+  Parameters: {"nbWeeks"=>4, "hoursPerWeek"=>40, "features"=>[{"name"=>"a", "duration"=>5, "priority"=>{"level"=>2, "score"=>2}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>[]}, {"name"=>"b", "duration"=>5, "priority"=>{"level"=>5, "score"=>5}, "required_skills"=>[{"name"=>"java"}], "depends_on"=>["a"]}], "resources"=>[{"name"=>"manel", "weekAvailability"=>100, "skills"=>[{"name"=>"java"}]}]}
+Completed 200 OK in 1ms (Views: 0.7ms)
+
+

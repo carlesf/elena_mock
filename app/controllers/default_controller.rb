@@ -24,7 +24,20 @@ class DefaultController < ApplicationController
 
   def add_skills_to_feature
     # Your code here
-
-    render json: {"message" => "yes, it worked"}
+    i = 0
+    result = Array.new
+    beginh = 0;
+    params[:features].each do |f|
+      item = Hash.new
+      item[:beginHour] = beginh
+      item[:endHour] = beginh + f[:duration]
+      item[:feature] = f
+      item[:resource] = params[:resources][i]
+      result.push(item)
+      i += 1
+      i = 0 if i ==  params[:resources].length
+      beginh = item[:endHour] + 1
+    end
+    render json: {:jobs => result}
   end
 end
