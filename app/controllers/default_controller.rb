@@ -30,7 +30,7 @@ class DefaultController < ApplicationController
     params[:features].each do |f|
       item = Hash.new
       item[:beginHour] = beginh
-      item[:endHour] = beginh + f[:duration]
+      item[:endHour] = beginh + f[:duration].to_d
       item[:feature] = f
       item[:resource] = params[:resources][i]
       result.push(item)
@@ -39,5 +39,6 @@ class DefaultController < ApplicationController
       beginh = item[:endHour] + 1
     end
     render json: {:jobs => result}
+   # render json: params
   end
 end
